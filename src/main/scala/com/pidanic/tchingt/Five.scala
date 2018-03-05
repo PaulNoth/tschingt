@@ -1,6 +1,6 @@
 package com.pidanic.tchingt
 
-case class Five(value: Int = 5) extends AnyVal {
+final case class Five(value: Int = 5) extends AnyVal {
   def + (otherVal: Double): Double = value + otherVal
   def + (otherVal: Long): Long = value + otherVal
   def + (otherVal: Float): Float = value + otherVal
