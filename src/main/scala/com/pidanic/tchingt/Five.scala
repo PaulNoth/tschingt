@@ -15,7 +15,8 @@ final class Five private (val value: Int = 5) extends AnyVal {
 }
 
 object Five {
-  implicit def toFive(value: Int) = new Five(value)
+  //implicit def toFive(value: Int) = new Five(value)
+  implicit def toInt(value: Five): Int = value.value
 
   private val five = Five()
 
