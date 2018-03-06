@@ -24,7 +24,7 @@ final class Five(private val value: Int = 5) extends Function0[Int] {
   def - (value: Long): Long = ???
   def - (value: Float): Float = ???
   def - (value: Double): Double = ???
-  def - (value: Five): Int = ???
+  def - (value: Five): Int = five - value.five
 
   def * (value: Int): Int = ???
   def * (value: Byte): Int = ???
@@ -33,7 +33,7 @@ final class Five(private val value: Int = 5) extends Function0[Int] {
   def * (value: Long): Long = ???
   def * (value: Float): Float = ???
   def * (value: Double): Double = ???
-  def * (value: Five): Int = ???
+  def * (value: Five): Int = five * value.five
 
   def / (value: Int): Int = ???
   def / (value: Byte): Int = ???
@@ -42,7 +42,7 @@ final class Five(private val value: Int = 5) extends Function0[Int] {
   def / (value: Long): Long = ???
   def / (value: Float): Float = ???
   def / (value: Double): Double = ???
-  def / (value: Five): Int = ???
+  def / (value: Five): Int = five / value.five
 
   def % (value: Int): Int = ???
   def % (value: Byte): Int = ???
@@ -51,16 +51,16 @@ final class Five(private val value: Int = 5) extends Function0[Int] {
   def % (value: Long): Long = ???
   def % (value: Float): Float = ???
   def % (value: Double): Double = ???
-  def % (value: Five): Int = ???
+  def % (value: Five): Int = five % value.five
 
   def high: String = "o/"
 }
 
 object Five {
-  private val six = new Five
+  private val five = new Five
 
-  def apply(): Five = six
+  def apply(): Five = five
 
   implicit def toFive(value: Int): Five = new Five(value)
-  implicit def toInt(value: Five): Int = value.value
+  implicit def toLong(value: Five): Long = value.value.toLong
 }

@@ -113,7 +113,7 @@ class FiveTest extends FlatSpec with Matchers {
 
   it should "substract itself with a short" in {
     val result = Five() - 5.toShort
-    result should equal(10)
+    result should equal(0)
   }
 
   it should "substract itself with a long" in {
@@ -138,7 +138,7 @@ class FiveTest extends FlatSpec with Matchers {
 
   it should "be possible a substraction of a Char with a Five" in {
     val result = 'A' - Five()
-    result should equal(-65)
+    result should equal(60)
   }
 
   it should "substract itself with an other Five" in {
@@ -224,7 +224,7 @@ class FiveTest extends FlatSpec with Matchers {
 
   it should "multiply itself with a double" in {
     val result = Five() * 5.0
-    result should equal(10.0)
+    result should equal(25.0)
   }
 
   it should "be possible a multiplication of a Float with a Five" in {
@@ -314,29 +314,9 @@ class FiveTest extends FlatSpec with Matchers {
     result should equal(0)
   }
 
-  it should "add itself with a float" in {
-    val result = Five() + 5.0.toFloat
-    result should equal(10.0)
-  }
-
-  it should "add itself with a double" in {
-    val result = Five() + 5.0
-    result should equal(10.0)
-  }
-
-  it should "be possible an addition of a Float with a Five" in {
-    val result = 5.0.toFloat + Five()
-    result should equal(10.0)
-  }
-
-  it should "be possible an addition of a Double with a Five" in {
-    val result = 5.0 + Five()
-    result should equal(10.0)
-  }
-
   it should "modulo itself with a char" in {
     val result = Five() % 'A'
-    result should equal(65)
+    result should equal(5)
   }
 
   it should "modulo itself with a byte" in {
@@ -375,7 +355,7 @@ class FiveTest extends FlatSpec with Matchers {
   }
 
   it should "modulo itself with an other Five" in {
-    val result = Five() / Five()
+    val result = Five() % Five()
     result should equal(0)
   }
 
