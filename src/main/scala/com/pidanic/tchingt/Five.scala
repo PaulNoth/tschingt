@@ -1,27 +1,66 @@
 package com.pidanic.tchingt
 
-final class Five private (val value: Int = 5) extends AnyVal {
-  def + (otherVal: Double): Double = value + otherVal
-  def + (otherVal: Long): Long = value + otherVal
-  def + (otherVal: Float): Float = value + otherVal
+final class Five(private val value: Int = 5) extends Function0[Int] {
 
-  // TODO is it ok?
-  //def + (otherVal: Char): String = value.toString + otherVal
-  def + (otherVal: String): String = value.toString + otherVal
+  private val five = value
 
-  def + (otherVal: Five): Int = value + otherVal.value
+  override def apply(): Int = five
+
+  override def toString(): String = five.toString
+
+  def + (value: Int): Int = five + value
+  def + (value: Byte): Int = five + value
+  def + (value: Short): Int = five + value
+  def + (value: Char): Int = five + value
+  def + (value: Long): Long = five + value
+  def + (value: Float): Float = five + value
+  def + (value: Double): Double = five + value
+  def + (value: Five): Int = five + value.five
+
+  def - (value: Int): Int = ???
+  def - (value: Byte): Int = ???
+  def - (value: Short): Int = ???
+  def - (value: Char): Int = ???
+  def - (value: Long): Long = ???
+  def - (value: Float): Float = ???
+  def - (value: Double): Double = ???
+  def - (value: Five): Int = ???
+
+  def * (value: Int): Int = ???
+  def * (value: Byte): Int = ???
+  def * (value: Short): Int = ???
+  def * (value: Char): Int = ???
+  def * (value: Long): Long = ???
+  def * (value: Float): Float = ???
+  def * (value: Double): Double = ???
+  def * (value: Five): Int = ???
+
+  def / (value: Int): Int = ???
+  def / (value: Byte): Int = ???
+  def / (value: Short): Int = ???
+  def / (value: Char): Int = ???
+  def / (value: Long): Long = ???
+  def / (value: Float): Float = ???
+  def / (value: Double): Double = ???
+  def / (value: Five): Int = ???
+
+  def % (value: Int): Int = ???
+  def % (value: Byte): Int = ???
+  def % (value: Short): Int = ???
+  def % (value: Char): Int = ???
+  def % (value: Long): Long = ???
+  def % (value: Float): Float = ???
+  def % (value: Double): Double = ???
+  def % (value: Five): Int = ???
 
   def high: String = "o/"
-
-  override def toString: String = "5"
 }
 
 object Five {
-  //implicit def toFive(value: Int) = new Five(value)
+  private val six = new Five
+
+  def apply(): Five = six
+
+  implicit def toFive(value: Int): Five = new Five(value)
   implicit def toInt(value: Five): Int = value.value
-
-  private val five = new Five()
-
-  def apply(): Five = five
 }
-
