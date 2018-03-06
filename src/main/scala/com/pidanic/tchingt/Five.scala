@@ -12,13 +12,15 @@ final class Five private (val value: Int = 5) extends AnyVal {
   def + (otherVal: Five): Int = value + otherVal.value
 
   def high: String = "o/"
+
+  override def toString: String = "5"
 }
 
 object Five {
   //implicit def toFive(value: Int) = new Five(value)
   implicit def toInt(value: Five): Int = value.value
 
-  private val five = Five()
+  private val five = new Five()
 
   def apply(): Five = five
 }
