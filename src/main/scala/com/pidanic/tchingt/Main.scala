@@ -1,6 +1,7 @@
 package com.pidanic.tchingt
 
-import com.pidanic.tchingt.Five._
+import Five._
+
 
 object Main extends App {
   //`5` + 5
@@ -15,9 +16,13 @@ object Main extends App {
   five + 1
   five + 1.toByte
   println(five.high)
+  println(five())
   println(1 + five)
   println(5 == Five())
   println(5 == Five)
+  println(5 >= Five())
+  println(Five() >= 5)
+  //println(Five == 5)
   //println(1.high)
 
   val six = new Five

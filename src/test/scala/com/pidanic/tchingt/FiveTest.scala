@@ -3,8 +3,18 @@ package com.pidanic.tchingt
 import org.scalatest.{FlatSpec, Matchers}
 
 class FiveTest extends FlatSpec with Matchers {
-  it should "be 5" in {
+  "Five" should "be 5" in {
     Five() should be equals 5
+  }
+
+  it should "instance be 5" in {
+    val five = Five()
+    five should be equals 5
+  }
+
+  it should "instance be 5 (2)" in {
+    val five = Five()
+    five() should be equals 5
   }
 
   it should "not be 6" in {
@@ -18,6 +28,14 @@ class FiveTest extends FlatSpec with Matchers {
   "+" should "add itself with an int" in {
     val result = Five() + 5
     result should equal(10)
+  }
+
+  it should "instance add itself with an int" in {
+    val five = Five()
+    val result = five + 5
+    val result2 = five() + 5
+    result should equal(10)
+    result2 should equal(10)
   }
 
   it should "add itself with a char" in {

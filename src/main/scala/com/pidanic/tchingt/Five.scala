@@ -1,6 +1,6 @@
 package com.pidanic.tchingt
 
-final class Five(private val value: Int = 5) extends Function0[Int] {
+final class Five(private val value: Int = 5) extends Function0[Int] {// with Ordered[Int] {
 
   private val five = value
 
@@ -54,6 +54,12 @@ final class Five(private val value: Int = 5) extends Function0[Int] {
   def % (value: Five): Int = five % value.five
 
   def high: String = "o/"
+
+  //override def compare(that: Int): Int = five - that
+
+  def == (that: Int): Boolean = five == that
+  def == (that: Five): Boolean = five == that.value
+  //def >= (that: Five): Boolean = five >= that.value
 }
 
 object Five {
