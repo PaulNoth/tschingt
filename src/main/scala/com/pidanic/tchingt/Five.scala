@@ -301,5 +301,5 @@ object Five {
 
   implicit def toFive(value: Int): Five = new Five(value)
   //implicit def toLong(value: Five): Long = value.value.toLong
-  //implicit def toInt(value: Five): Int = value.value
+  implicit def toInt(value: Five): Int = value.value
 }

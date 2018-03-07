@@ -713,7 +713,7 @@ class FiveTest extends FlatSpec with Matchers {
 
   "The Law of Fives" should "never be wrong" in {
     val five = Five()
-    five.law() should equal("The Law of Fives states simply that: All things happen in fives, or are divisible by or are multiples of five, or are somehow directly or indirectly appropriate to 5. The Law of Fives is never wrong.")
+    five.law should equal("The Law of Fives states simply that: All things happen in fives, or are divisible by or are multiples of five, or are somehow directly or indirectly appropriate to 5. The Law of Fives is never wrong.")
   }
 
   "convertTo" should "give correct result" in {
