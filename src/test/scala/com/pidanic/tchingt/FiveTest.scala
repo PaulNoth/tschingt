@@ -460,9 +460,9 @@ class FiveTest extends FlatSpec with Matchers {
     val result2 = five() << 2
     val result3 = Five() << 2
 
-    result1 should equal(12)
-    result2 should equal(12)
-    result3 should equal(12)
+    result1 should equal(20)
+    result2 should equal(20)
+    result3 should equal(20)
   }
 
   it should "give correct result (2)" in {
@@ -484,9 +484,9 @@ class FiveTest extends FlatSpec with Matchers {
     val result2 = five() >>> 2
     val result3 = Five() >>> 2
 
-    result1 should equal(0)
-    result2 should equal(0)
-    result3 should equal(0)
+    result1 should equal(1)
+    result2 should equal(1)
+    result3 should equal(1)
   }
 
   it should "give correct result (2)" in {
@@ -595,44 +595,6 @@ class FiveTest extends FlatSpec with Matchers {
     result1 should equal(false)
     result2 should equal(false)
     result3 should equal(false)
-  }
-
-  "==" should "give correct result" in {
-    val five = Five()
-
-    val result1 = five == 2
-    val result2 = five() == 2
-    val result3 = Five() == 2
-    val result4 = Five() == Five()
-    val result5 = Five() == five
-    val result6 = Five() == five()
-    val result7 = Five() == 5
-
-    result1 should equal(false)
-    result2 should equal(false)
-    result3 should equal(false)
-    result4 should equal(true)
-    result5 should equal(true)
-    result6 should equal(true)
-    result7 should equal(true)
-  }
-
-  it should "give correct result (2)" in {
-    val five = Five()
-
-    val result1 = 2 == five
-    val result2 = 2 == five()
-    val result3 = 2 == Five()
-    val result4 = 5 == Five()
-    val result5 = 5 == five()
-    val result6 = 5 == five
-
-    result1 should equal(false)
-    result2 should equal(false)
-    result3 should equal(false)
-    result4 should equal(true)
-    result5 should equal(true)
-    result6 should equal(true)
   }
 
   "==" should "give correct result" in {
@@ -990,7 +952,7 @@ class FiveTest extends FlatSpec with Matchers {
 
   "romansh" should "be 'tchingt'" in {
     val five = Five()
-    five.romansh should equal("tchings")
+    five.romansh should equal("tchingt")
   }
 
   "russian" should "be 'пять'" in {
@@ -1108,7 +1070,7 @@ class FiveTest extends FlatSpec with Matchers {
     five.loud("piglatin") should equal("IVEFAY")
   }
 
-  it should "be '' in russian" in {
+  it should "be 'ПЯТЬ' in russian" in {
     val five = Five()
     five.loud("russian") should equal("ПЯТЬ")
   }
@@ -1140,7 +1102,7 @@ class FiveTest extends FlatSpec with Matchers {
 
   "euro" should "be 5€" in {
     val five = Five()
-    five.euro should equal("5,00 €")
+    five.euro should equal("5€")
   }
 
   "r" should "be £5" in {

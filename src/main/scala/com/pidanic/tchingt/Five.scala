@@ -1,5 +1,10 @@
 package com.pidanic.tchingt
 
+import java.math.BigInteger
+import java.util.Date
+
+import scala.collection.GenTraversable
+
 final class Five(private val value: Int = 5) extends Function0[Int] {
 
   private val five = value
@@ -8,289 +13,325 @@ final class Five(private val value: Int = 5) extends Function0[Int] {
 
   override def toString(): String = five.toString
 
-  def + (value: Int): Int = five + value
-  def + (value: Byte): Int = five + value
-  def + (value: Short): Int = five + value
-  def + (value: Char): Int = five + value
-  def + (value: Long): Long = five + value
-  def + (value: Float): Float = five + value
-  def + (value: Double): Double = five + value
-  def + (value: Five): Int = five + value.five
+  def + (that: Int): Int = five + that
+  def + (that: Byte): Int = five + that
+  def + (that: Short): Int = five + that
+  def + (that: Char): Int = five + that
+  def + (that: Long): Long = five + that
+  def + (that: Float): Float = five + that
+  def + (that: Double): Double = five + that
+  def + (that: Five): Int = five + that.five
 
-  def - (value: Int): Int = ???
-  def - (value: Byte): Int = ???
-  def - (value: Short): Int = ???
-  def - (value: Char): Int = ???
-  def - (value: Long): Long = ???
-  def - (value: Float): Float = ???
-  def - (value: Double): Double = ???
-  def - (value: Five): Int = five - value.five
+  def - (that: Int): Int = five - that
+  def - (that: Byte): Int = five - that
+  def - (that: Short): Int = five - that
+  def - (that: Char): Int = five - that
+  def - (that: Long): Long = five - that
+  def - (that: Float): Float = five - that
+  def - (that: Double): Double = five - that
+  def - (that: Five): Int = five - that.five
 
-  def * (value: Int): Int = ???
-  def * (value: Byte): Int = ???
-  def * (value: Short): Int = ???
-  def * (value: Char): Int = ???
-  def * (value: Long): Long = ???
-  def * (value: Float): Float = ???
-  def * (value: Double): Double = ???
-  def * (value: Five): Int = five * value.five
+  def * (that: Int): Int = five * that
+  def * (that: Byte): Int = five * that
+  def * (that: Short): Int = five * that
+  def * (that: Char): Int = five * that
+  def * (that: Long): Long = five * that
+  def * (that: Float): Float = five * that
+  def * (that: Double): Double = five * that
+  def * (that: Five): Int = five * that.five
 
-  def / (value: Int): Int = ???
-  def / (value: Byte): Int = ???
-  def / (value: Short): Int = ???
-  def / (value: Char): Int = ???
-  def / (value: Long): Long = ???
-  def / (value: Float): Float = ???
-  def / (value: Double): Double = ???
-  def / (value: Five): Int = five / value.five
+  def / (that: Int): Int = five / that
+  def / (that: Byte): Int = five / that
+  def / (that: Short): Int = five / that
+  def / (that: Char): Int = five / that
+  def / (that: Long): Long = five / that
+  def / (that: Float): Float = five / that
+  def / (that: Double): Double = five / that
+  def / (that: Five): Int = five / that.five
 
-  def % (value: Int): Int = ???
-  def % (value: Byte): Int = ???
-  def % (value: Short): Int = ???
-  def % (value: Char): Int = ???
-  def % (value: Long): Long = ???
-  def % (value: Float): Float = ???
-  def % (value: Double): Double = ???
-  def % (value: Five): Int = five % value.five
+  def % (that: Int): Int = five % that
+  def % (that: Byte): Int = five % that
+  def % (that: Short): Int = five % that
+  def % (that: Char): Int = five % that
+  def % (that: Long): Long = five % that
+  def % (that: Float): Float = five % that
+  def % (that: Double): Double = five % that
+  def % (that: Five): Int = five % that.five
 
-  def & (value: Int): Int = ???
-  def & (value: Byte): Int = ???
-  def & (value: Short): Int = ???
-  def & (value: Char): Int = ???
-  def & (value: Long): Long = ???
-  def & (value: Five): Int = ???
+  def & (that: Int): Int = five & that
+  def & (that: Byte): Int = five & that
+  def & (that: Short): Int = five & that
+  def & (that: Char): Int = five & that
+  def & (that: Long): Long = five & that
+  def & (that: Five): Int = five & that.five
 
-  def | (value: Int): Int = ???
-  def | (value: Byte): Int = ???
-  def | (value: Short): Int = ???
-  def | (value: Char): Int = ???
-  def | (value: Long): Long = ???
-  def | (value: Five): Int = ???
+  def | (that: Int): Int = five | that
+  def | (that: Byte): Int = five | that
+  def | (that: Short): Int = five | that
+  def | (that: Char): Int = five | that
+  def | (that: Long): Long = five | that
+  def | (that: Five): Int = five | that.five
 
-  def ^ (value: Int): Int = ???
-  def ^ (value: Byte): Int = ???
-  def ^ (value: Short): Int = ???
-  def ^ (value: Char): Int = ???
-  def ^ (value: Long): Long = ???
-  def ^ (value: Five): Int = ???
+  def ^ (that: Int): Int = five ^ that
+  def ^ (that: Byte): Int = five ^ that
+  def ^ (that: Short): Int = five ^ that
+  def ^ (that: Char): Int = five ^ that
+  def ^ (that: Long): Long = five ^ that
+  def ^ (that: Five): Int = five ^ that
 
-  def >> (value: Int): Int = ???
-  def >> (value: Byte): Int = ???
-  def >> (value: Short): Int = ???
-  def >> (value: Char): Int = ???
-  def >> (value: Long): Long = ???
-  def >> (value: Five): Int = ???
+  def >> (that: Int): Int = five >> that
+  def >> (that: Byte): Int = five >> that
+  def >> (that: Short): Int = five >> that
+  def >> (that: Char): Int = five >> that
+  def >> (that: Long): Long = five >> that
+  def >> (that: Five): Int = five >> that.five
 
-  def >>> (value: Int): Int = ???
-  def >>> (value: Byte): Int = ???
-  def >>> (value: Short): Int = ???
-  def >>> (value: Char): Int = ???
-  def >>> (value: Long): Long = ???
-  def >>> (value: Five): Int = ???
+  def >>> (that: Int): Int = five >>> that
+  def >>> (that: Byte): Int = five >>> that
+  def >>> (that: Short): Int = five >>> that
+  def >>> (that: Char): Int = five >>> that
+  def >>> (that: Long): Long = five >>> that
+  def >>> (that: Five): Int = five >>> that.five
 
-  def << (value: Int): Int = ???
-  def << (value: Byte): Int = ???
-  def << (value: Short): Int = ???
-  def << (value: Char): Int = ???
-  def << (value: Long): Int = ???
-  def << (value: Five): Int = ???
+  def << (that: Int): Int = five << that
+  def << (that: Byte): Int = five << that
+  def << (that: Short): Int = five << that
+  def << (that: Char): Int = five << that
+  def << (that: Long): Int = five << that
+  def << (that: Five): Int = five << that.five
 
-  def > (value: Int): Boolean = ???
-  def > (value: Byte): Boolean = ???
-  def > (value: Short): Boolean = ???
-  def > (value: Char): Boolean = ???
-  def > (value: Long): Boolean = ???
-  def > (value: Float): Boolean = ???
-  def > (value: Double): Boolean = ???
-  def > (value: Five): Boolean = ???
+  def > (that: Int): Boolean = five > that
+  def > (that: Byte): Boolean = five > that
+  def > (that: Short): Boolean = five > that
+  def > (that: Char): Boolean = five > that
+  def > (that: Long): Boolean = five > that
+  def > (that: Float): Boolean = five > that
+  def > (that: Double): Boolean = five > that
+  def > (that: Five): Boolean = five > that.five
 
-  def >= (value: Int): Boolean = ???
-  def >= (value: Byte): Boolean = ???
-  def >= (value: Short): Boolean = ???
-  def >= (value: Char): Boolean = ???
-  def >= (value: Long): Boolean = ???
-  def >= (value: Float): Boolean = ???
-  def >= (value: Double): Boolean = ???
-  def >= (value: Five): Boolean = ???
+  def >= (that: Int): Boolean = five >= that
+  def >= (that: Byte): Boolean = five >= that
+  def >= (that: Short): Boolean = five >= that
+  def >= (that: Char): Boolean = five >= that
+  def >= (that: Long): Boolean = five >= that
+  def >= (that: Float): Boolean = five >= that
+  def >= (that: Double): Boolean = five >= that
+  def >= (that: Five): Boolean = five >= that.five
 
-  def < (value: Int): Boolean = ???
-  def < (value: Byte): Boolean = ???
-  def < (value: Short): Boolean = ???
-  def < (value: Char): Boolean = ???
-  def < (value: Long): Boolean = ???
-  def < (value: Float): Boolean = ???
-  def < (value: Double): Boolean = ???
-  def < (value: Five): Boolean = ???
+  def < (that: Int): Boolean = five < that
+  def < (that: Byte): Boolean = five < that
+  def < (that: Short): Boolean = five < that
+  def < (that: Char): Boolean = five < that
+  def < (that: Long): Boolean = five < that
+  def < (that: Float): Boolean = five < that
+  def < (that: Double): Boolean = five < that
+  def < (that: Five): Boolean = five < that.five
 
-  def <= (value: Int): Boolean = ???
-  def <= (value: Byte): Boolean = ???
-  def <= (value: Short): Boolean = ???
-  def <= (value: Char): Boolean = ???
-  def <= (value: Long): Boolean = ???
-  def <= (value: Float): Boolean = ???
-  def <= (value: Double): Boolean = ???
-  def <= (value: Five): Boolean = ???
+  def <= (that: Int): Boolean = five <= that
+  def <= (that: Byte): Boolean = five <= that
+  def <= (that: Short): Boolean = five <= that
+  def <= (that: Char): Boolean = five <= that
+  def <= (that: Long): Boolean = five <= that
+  def <= (that: Float): Boolean = five <= that
+  def <= (that: Double): Boolean = five <= that
+  def <= (that: Five): Boolean = five <= that.five
 
-  def == (value: Int): Boolean = ???
-  def == (value: Byte): Boolean = ???
-  def == (value: Short): Boolean = ???
-  def == (value: Char): Boolean = ???
-  def == (value: Long): Boolean = ???
-  def == (value: Float): Boolean = ???
-  def == (value: Double): Boolean = ???
-  def == (value: Five): Boolean = ???
+  def == (that: Int): Boolean = five == that
+  def == (that: Byte): Boolean = five == that
+  def == (that: Short): Boolean = five == that
+  def == (that: Char): Boolean = five == that
+  def == (that: Long): Boolean = five == that
+  def == (that: Float): Boolean = five == that
+  def == (that: Double): Boolean = five == that
+  def == (that: Five): Boolean = five == that.five
 
-  def != (value: Int): Boolean = ???
-  def != (value: Byte): Boolean = ???
-  def != (value: Short): Boolean = ???
-  def != (value: Char): Boolean = ???
-  def != (value: Long): Boolean = ???
-  def != (value: Float): Boolean = ???
-  def != (value: Double): Boolean = ???
-  def != (value: Five): Boolean = ???
+  def != (that: Int): Boolean = five != that
+  def != (that: Byte): Boolean = five != that
+  def != (that: Short): Boolean = five != that
+  def != (that: Char): Boolean = five != that
+  def != (that: Long): Boolean = five != that
+  def != (that: Float): Boolean = five != that
+  def != (that: Double): Boolean = five != that
+  def != (that: Five): Boolean = five != that.five
 
   def high: String = "o/"
 
-  def law: String = ???
+  def law: String = "The Law of Fives states simply that: All things happen in fives, or are divisible by or are multiples of five, or are somehow directly or indirectly appropriate to 5. The Law of Fives is never wrong."
 
-  def convertTo(that: Any): Any = ???
+  def convertTo(that: Any): Any = that
 
-  def roman: String = ???
+  def roman: String = "V"
 
-  def upHigh: String = ???
+  def upHigh: String = "⁵"
 
-  def downLow: String = ???
+  def downLow: String = "₅"
 
-  def arabic: String = ???
-  def azerbaijani: String = ???
-  def basque: String = ???
-  def belarusian: String = ???
-  def bosnian: String = ???
-  def bulgarian: String = ???
-  def catalan: String = ???
-  def chinese(typ: String = "chinese"): String = ???
-  def choctaw: String = ???
-  def croatian: String = ???
-  def czech: String = ???
-  def dothraki: String = ???
-  def dovah: String = ???
-  def dutch: String = ???
-  def elvish(typ: String = "elvish"): String = ???
-  def english: String = ???
-  def esperanto: String = ???
-  def estonian: String = ???
-  def finnish: String = ???
-  def french: String = ???
-  def german: String = ???
-  def greek: String = ???
-  def hebrew: String = ???
-  def hindi: String = ???
-  def hungarian: String = ???
-  def icelandic: String = ???
-  def indonesian: String = ???
-  def irish: String = ???
-  def italian: String = ???
-  def japanese: String = ???
-  def kannada: String = ???
-  def klingon: String = ???
-  def korean: String = ???
-  def latin: String = ???
-  def latvian: String = ???
-  def lithuanian: String = ???
-  def maltese: String = ???
-  def mongolian: String = ???
-  def nepali: String = ???
-  def norwegian: String = ???
-  def persian: String = ???
-  def piglatin: String = ???
-  def polish: String = ???
-  def portuguese: String = ???
-  def punjabi: String = ???
-  def romanian: String = ???
-  def romansh: String = ???
-  def russian: String = ???
-  def serbian: String = ???
-  def sinhala: String = ???
-  def slovak: String = ???
-  def slovenian: String = ???
-  def spanish: String = ???
-  def swedish: String = ???
-  def tamil: String = ???
-  def telugu: String = ???
-  def turkish: String = ???
-  def thai: String = ???
-  def ukrainian: String = ???
-  def welsh: String = ???
+  def arabic: String = "خمسة"
+  def azerbaijani: String = "beş"
+  def basque: String = "bost"
+  def belarusian: String = "пяць"
+  def bosnian: String = "pet"
+  def bulgarian: String = "пет"
+  def catalan: String = "cinc"
+  def chinese(`type`: String = "chinese"): String = `type` match {
+    case "pinyin" => "wǔ"
+    case "financial" => "伍"
+    case _ => "五"
+  }
+  def choctaw: String = "tahlapi"
+  def croatian: String = "pet"
+  def czech: String = "pět"
+  def dothraki: String = "mek"
+  def dovah: String = "hen"
+  def dutch: String = "vijf"
+  def elvish(`type`: String = "elvish"): String = `type` match {
+    case "quenya" => "lempë"
+    case "sindarin" => "leben"
+    case _ => "lempë"
+  }
+  def english: String = "five"
+  def esperanto: String = "kvin"
+  def estonian: String = "viis"
+  def finnish: String = "viisi"
+  def french: String = "cinq"
+  def german: String = "fünf"
+  def greek: String = "πέντε"
+  def hebrew: String = "חמש"
+  def hindi: String = "पांच"
+  def hungarian: String = "öt"
+  def icelandic: String = "fimm"
+  def indonesian: String = "lima"
+  def irish: String = "cúig"
+  def italian: String = "cinque"
+  def japanese: String = "五"
+  def kannada: String = "ಐದು"
+  def klingon: String = "vagh"
+  def korean: String = "오"
+  def latin: String = "quinque"
+  def latvian: String = "pieci"
+  def lithuanian: String = "penki"
+  def maltese: String = "ħamsa"
+  def mongolian: String = "таван"
+  def nepali: String = "पाँच"
+  def norwegian: String = "fem"
+  def persian: String = "پنج"
+  def piglatin: String = "ivefay"
+  def polish: String = "pięć"
+  def portuguese: String = "cinco"
+  def punjabi: String = "ਪੰਜ"
+  def romanian: String = "cinci"
+  def romansh: String = "tchingt"
+  def russian: String = "пять"
+  def serbian: String = "pet"
+  def sinhala: String = "පහ"
+  def slovak: String = "päť"
+  def slovenian: String = "pet"
+  def spanish: String = "cinco"
+  def swedish: String = "fem"
+  def tamil: String = "ஐந்து"
+  def telugu: String = "ఐదు"
+  def turkish: String = "beş"
+  def thai: String = "ห้า"
+  def ukrainian: String = "п’ять"
+  def welsh: String = "pump"
 
-  def morseCode: String = ???
+  def morseCode: String = "....."
 
-  def base(i: Int): String = ???
+  def base(i: Int): String = BigInteger.valueOf(five).toString(i)
 
-  def binary: String = ???
+  def binary: String = five.toBinaryString
 
-  def octal: String = ???
+  def octal: String = five.toOctalString
 
-  def hex: String = ???
+  def hex: String = five.toHexString
 
-  def mdFive: String = ???
+  def mdFive: String = "30056e1cab7a61d256fc8edd970d14f5"
 
-  def golden: Double = ???
+  def golden: Double = {
+    val pointFive = five.toDouble / (five + five)
+    Math.pow(five.toDouble, pointFive) * pointFive + pointFive
+  }
 
-  def negative: Int = ???
+  def negative: Int = -five
 
-  def loud(str: String = "english"): String = ???
+  def loud(lang: String = "english"): String = {
+    val method = try {
+      Option(this.getClass.getMethod(lang))
+    } catch {
+      case ex: NoSuchMethodException => None
+      case e => throw e
+    }
+    if (method.isDefined)
+      method.get.invoke(this).asInstanceOf[String].toUpperCase
+    else
+      english.toUpperCase
 
-  def smooth: String = ???
+  }
 
-  def oclock: String = ???
+  def smooth: String = "S"
 
-  def oclockSomewhere: String = ???
+  def oclock: String = "🕔"
 
-  def guys: String = ???
+  def oclockSomewhere: String = "🍺"
 
-  def bucks: String = ???
+  def guys: String = "🍔"
 
-  def euro: String = ???
+  def bucks: String = "$" + five + ".00"
 
-  def r: String = ???
+  def euro: String = "5€"
 
-  def dollar: String = ???
+  def r: String = "£5"
 
-  def tooSlow: Int = ???
+  def dollar: String = "$5"
 
-  def jackson: List[String] = ???
+  def tooSlow: Int = {
+    val returnIn = new Date().getTime + 555
 
-  def fab: List[String] = ???
+    do {} while(new Date().getTime < returnIn)
 
-  def members: List[String] = ???
+    five
+  }
 
-  def discography: List[String] = ???
+  def jackson: List[String] = List("Jackie", "Tito", "Jermaine", "Marlon", "Michael")
 
-  def singles: List[String] = ???
+  def fab: List[String] = List("Juwan Howard", "Ray Jackson", "Jimmy King", "Jalen Rose", "Chris Webber")
 
-  def furious: List[String] = ???
+  def members: List[String] = List("Sean Conlon", "Ritchie Neville", "Scott Robinson", "Jason 'J' Brown", "Abz Love")
 
-  def famous: List[String] = ???
+  def discography: List[String] = List("5ive", "Invincible", "Kingsize")
 
-  def fiveFiveFive: String = ???
+  def singles: List[String] = List("Slam Dunk (Da Funk)", "When the Lights Go Out", "Got the Feelin'",
+    "Everybody Get Up", "It's the Things You Do", "Until the Time Is Through", "If Ya Gettin' Down", "Keep On Movin'",
+    "Don't Wanna Let You Go", "We Will Rock You", "Let's Dance", "Closer to Me", "Rock the Party", "I Wish It Could Be Christmas Everyday")
 
-  def luniz: String = ???
+  def furious: List[String] = List("Tigress", "Viper", "Crane", "Monkey", "Mantis")
 
-  def funk: List[String] = ???
+  def famous: List[String] = List("Julian", "Dick", "George", "Anne", "Timmy")
 
-  def isFive(num: Int): Boolean = ???
+  def fiveFiveFive: String = "Interstella 5555: The 5tory of the 5ecret 5tar 5ystem"
 
-  def filter(ints: List[Int]): List[Int] = ???
+  def luniz: String = "I Got 5 on It"
 
-  def map(ints: List[Int]): List[Int] = ???
+  def funk: String = "5 bad boys with the power to rock you"
 
-  def reduce(ints: List[Int]): Int = ???
+  def isFive(num: Int): Boolean = num == five
+
+  def filter(ints: GenTraversable[Int]): GenTraversable[Int] = ints.filter(_ == five)
+
+  def map(ints: GenTraversable[Int]): GenTraversable[Int] = ints.map(_ => five)
+
+  def reduce(ints: GenTraversable[Int]): Int = five
 
   def rot(ints: List[Int]): List[Int] = ???
 
   def rot(str: String): String = ???
 
-  def factorial: Int = ???
+  def factorial: Int = 120
+
+  // TODO
+  def async(callback: (Throwable, Int) => Unit): Unit = {
+    callback(null, five)
+  }
 
 }
 
