@@ -1,6 +1,6 @@
 name := "Tchingt"
 
-version := "0.1"
+version := "0.8.0"
 
 scalaVersion := "2.12.4"
 

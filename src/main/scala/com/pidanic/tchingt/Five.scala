@@ -2,12 +2,15 @@ package com.pidanic.tchingt
 
 import java.math.BigInteger
 import java.util.Date
+import java.util.concurrent.TimeUnit
 
 import scala.collection.GenTraversable
+import scala.concurrent.{Await, Future}
+import scala.util.Try
+import scala.concurrent.ExecutionContext.Implicits.global
+import scala.concurrent.duration.Duration
 
-final class Five(private val value: Int = 5) extends Function0[Int] {
-
-  private val five = value
+final class Five(private val five: Int = 5) extends Function0[Int] {
 
   override def apply(): Int = five
 
@@ -310,9 +313,9 @@ final class Five(private val value: Int = 5) extends Function0[Int] {
 
   def fiveFiveFive: String = "Interstella 5555: The 5tory of the 5ecret 5tar 5ystem"
 
-  def luniz: String = "I Got 5 on It"
+  def luniz: String = s"I Got $five on It"
 
-  def funk: String = "5 bad boys with the power to rock you"
+  def funk: String = s"$five bad boys with the power to rock you"
 
   def isFive(num: Int): Boolean = num == five
 
@@ -329,10 +332,22 @@ final class Five(private val value: Int = 5) extends Function0[Int] {
   def factorial: Int = 120
 
   // TODO
-  def async(callback: (Throwable, Int) => Unit): Unit = {
-    callback(null, five)
+  def async2: (Try[Int] => Unit) => Unit = {
+    onFinish => {
+      global.execute(new Runnable {
+        override def run(): Unit = {
+          println("sdasdas")
+          onFinish(Try(five))
+        }
+      })
+    }
   }
 
+  def async(callback: Try[Int] => Unit): Unit = {
+    Await.result(Future {
+      callback(Try(five))
+    }, Duration(five, TimeUnit.SECONDS))
+  }
 }
 
 object Five {
@@ -342,5 +357,5 @@ object Five {
 
   implicit def toFive(value: Int): Five = new Five(value)
   //implicit def toLong(value: Five): Long = value.value.toLong
-  implicit def toInt(value: Five): Int = value.value
+  implicit def toInt(value: Five): Int = value.five
 }

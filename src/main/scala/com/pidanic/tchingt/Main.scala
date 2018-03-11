@@ -1,7 +1,12 @@
 package com.pidanic.tchingt
 
+import java.util.concurrent.TimeUnit
+
 import Five._
 
+import scala.concurrent.ExecutionContext.Implicits.global
+import scala.concurrent.duration.Duration
+import scala.concurrent.{Await, Future}
 
 object Main extends App {
   //`5` + 5
@@ -39,6 +44,17 @@ object Main extends App {
   println(Five().getClass.getTypeName)
   println(10 + six)
   val a = 10 + six
+
+
+  //five.async(five => {
+  //  println("async " + five.get)
+  //println("async " + five)
+  //  println("async " + five)
+  //  println("async " + five)
+  //  println("async " + five)
+  //})
+  five.async2(five => println("async " + five))
+  //Await.result(Duration(10, TimeUnit.SECONDS))
 
 
   //println(five == five2)
