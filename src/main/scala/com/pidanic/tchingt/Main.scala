@@ -53,7 +53,7 @@ object Main extends App {
   //  println("async " + five)
   //  println("async " + five)
   //})
-  five.async2(five => println("async " + five))
+  //five.async2(five => println("async " + five))
   //Await.result(Duration(10, TimeUnit.SECONDS))
 
 

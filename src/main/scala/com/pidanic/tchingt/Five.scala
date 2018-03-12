@@ -262,7 +262,7 @@ final class Five(private val five: Int = 5) extends Function0[Int] {
       Option(this.getClass.getMethod(lang))
     } catch {
       case ex: NoSuchMethodException => None
-      case e => throw e
+      case e: Throwable => throw e
     }
     if (method.isDefined)
       method.get.invoke(this).asInstanceOf[String].toUpperCase
@@ -337,8 +337,9 @@ final class Five(private val five: Int = 5) extends Function0[Int] {
 
   def async(callback: Try[Int] => Unit): Unit = {
     Await.result(Future {
+      Thread.sleep(five * 1000)
       callback(Try(five))
-    }, Duration(5, TimeUnit.SECONDS))
+    }, Duration(6, TimeUnit.SECONDS))
   }
 }
 

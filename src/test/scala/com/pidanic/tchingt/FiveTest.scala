@@ -620,19 +620,19 @@ class FiveTest extends FlatSpec with Matchers {
   it should "give correct result (2)" in {
     val five = Five()
 
-    val result1 = 2 == five
+    //val result1 = 2 == five
     val result2 = 2 == five()
-    val result3 = 2 == Five()
-    val result4 = 5 == Five()
+    //val result3 = 2 == Five()
+    //val result4 = 5 == Five()
     val result5 = 5 == five()
-    val result6 = 5 == five
+    //val result6 = 5 == five
 
-    result1 should equal(false)
+    //result1 should equal(false)
     result2 should equal(false)
-    result3 should equal(false)
-    result4 should equal(true)
+    //result3 should equal(false)
+    //result4 should equal(true)
     result5 should equal(true)
-    result6 should equal(true)
+    //result6 should equal(true)
   }
 
   "!=" should "give correct result" in {
@@ -658,19 +658,19 @@ class FiveTest extends FlatSpec with Matchers {
   it should "give correct result (2)" in {
     val five = Five()
 
-    val result1 = 2 != five
+    //val result1 = 2 != five
     val result2 = 2 != five()
-    val result3 = 2 != Five()
-    val result4 = 5 != Five()
+    //val result3 = 2 != Five()
+    //val result4 = 5 != Five()
     val result5 = 5 != five()
-    val result6 = 5 != five
+    //val result6 = 5 != five
 
-    result1 should equal(true)
+    //result1 should equal(true)
     result2 should equal(true)
-    result3 should equal(true)
-    result4 should equal(false)
+    //result3 should equal(true)
+    //result4 should equal(false)
     result5 should equal(false)
-    result6 should equal(false)
+    //result6 should equal(false)
   }
 
   "The Law of Fives" should "never be wrong" in {
@@ -1224,7 +1224,7 @@ class FiveTest extends FlatSpec with Matchers {
     five.reduce(List(1, 2, 3)) should equal(5)
   }
 
-  "rot" should "rotate strings" in {
+  "rot" should "rotate numeric strings" in {
     val five = Five()
     five.rot("0123456789") should equal("5678901234")
   }
@@ -1249,32 +1249,20 @@ class FiveTest extends FlatSpec with Matchers {
     five.factorial should equal(120)
   }
 
-//  var fiveEmitter = five.emitter();
-//  var emitterTested = false;
-//
-//  fiveEmitter.on('five', function(e) {
-//    assert.equal(5, e, 'Five event emitter should only emit 5');
-//    emitterTested = true;
-//  });
-//
-//  setTimeout(function() {
-//    if(!emitterTested) {
-//      console.error('The five event emitter did something unexpected! I hope you\'re not using this feature in production');
-//      process.exit(1);
-//    }
-//    process.exit(0);
-//  }, 100);
-//
-//  var asyncTests = 1;
-//  five.async(function(err, five) {
-//    assert.equal(err, null, 'Async should not result in an error.');
-//    assert.equal(five, 5, 'Async should pass 5 to callback.');
-//    asyncTests--;
-//  });
-//
-//  setInterval(function() {
-//    if (!asyncTests) {
-//      process.exit(0);
-//    }
-//  }, 100);
+  "async" should "should not throw an error" in {
+    val five = Five()
+
+    five.async(five => {
+      five.isSuccess should equal(true)
+      five.isFailure should equal(false)
+    })
+  }
+
+  "async" should "should be 5" in {
+    val five = Five()
+
+    five.async(five => {
+      five.get should equal(5)
+    })
+  }
 }
