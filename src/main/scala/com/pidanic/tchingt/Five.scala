@@ -16,145 +16,739 @@ final class Five(private val five: Int = 5) extends Function0[Int] {
 
   override def toString(): String = five.toString
 
+  /**
+    * Returns the sum of this value and that.
+    */
   def + (that: Int): Int = five + that
+  /**
+    * Returns the sum of this value and that.
+    */
   def + (that: Byte): Int = five + that
+  /**
+    * Returns the sum of this value and that.
+    */
   def + (that: Short): Int = five + that
+  /**
+    * Returns the sum of this value and that.
+    */
   def + (that: Char): Int = five + that
+  /**
+    * Returns the sum of this value and that.
+    */
   def + (that: Long): Long = five + that
+  /**
+    * Returns the sum of this value and that.
+    */
   def + (that: Float): Float = five + that
+  /**
+    * Returns the sum of this value and that.
+    */
   def + (that: Double): Double = five + that
+  /**
+    * Returns the sum of this value and that.
+    */
   def + (that: Five): Int = five + that.five
 
+  /**
+    * Returns the difference of this value and that.
+    */
   def - (that: Int): Int = five - that
+  /**
+    * Returns the difference of this value and that.
+    */
   def - (that: Byte): Int = five - that
+  /**
+    * Returns the difference of this value and that.
+    */
   def - (that: Short): Int = five - that
+  /**
+    * Returns the difference of this value and that.
+    */
   def - (that: Char): Int = five - that
+  /**
+    * Returns the difference of this value and that.
+    */
   def - (that: Long): Long = five - that
+  /**
+    * Returns the difference of this value and that.
+    */
   def - (that: Float): Float = five - that
+  /**
+    * Returns the difference of this value and that.
+    */
   def - (that: Double): Double = five - that
+  /**
+    * Returns the difference of this value and that.
+    */
   def - (that: Five): Int = five - that.five
 
+  /**
+    * Returns the product of this value and that.
+    */
   def * (that: Int): Int = five * that
+  /**
+    * Returns the product of this value and that.
+    */
   def * (that: Byte): Int = five * that
+  /**
+    * Returns the product of this value and that.
+    */
   def * (that: Short): Int = five * that
+  /**
+    * Returns the product of this value and that.
+    */
   def * (that: Char): Int = five * that
+  /**
+    * Returns the product of this value and that.
+    */
   def * (that: Long): Long = five * that
+  /**
+    * Returns the product of this value and that.
+    */
   def * (that: Float): Float = five * that
+  /**
+    * Returns the product of this value and that.
+    */
   def * (that: Double): Double = five * that
+  /**
+    * Returns the product of this value and that.
+    */
   def * (that: Five): Int = five * that.five
 
+  /**
+    * Returns the quotient of this value and that.
+    */
   def / (that: Int): Int = five / that
+  /**
+    * Returns the quotient of this value and that.
+    */
   def / (that: Byte): Int = five / that
+  /**
+    * Returns the quotient of this value and that.
+    */
   def / (that: Short): Int = five / that
+  /**
+    * Returns the quotient of this value and that.
+    */
   def / (that: Char): Int = five / that
+  /**
+    * Returns the quotient of this value and that.
+    */
   def / (that: Long): Long = five / that
+  /**
+    * Returns the quotient of this value and that.
+    */
   def / (that: Float): Float = five / that
+  /**
+    * Returns the quotient of this value and that.
+    */
   def / (that: Double): Double = five / that
+  /**
+    * Returns the quotient of this value and that.
+    */
   def / (that: Five): Int = five / that.five
 
+  /**
+    * Returns the remainder of the division of this value by `that`.
+    */
   def % (that: Int): Int = five % that
+  /**
+    * Returns the remainder of the division of this value by `that`.
+    */
   def % (that: Byte): Int = five % that
+  /**
+    * Returns the remainder of the division of this value by `that`.
+    */
   def % (that: Short): Int = five % that
+  /**
+    * Returns the remainder of the division of this value by `that`.
+    */
   def % (that: Char): Int = five % that
+  /**
+    * Returns the remainder of the division of this value by `that`.
+    */
   def % (that: Long): Long = five % that
+  /**
+    * Returns the remainder of the division of this value by `that`.
+    */
   def % (that: Float): Float = five % that
+  /**
+    * Returns the remainder of the division of this value by `that`.
+    */
   def % (that: Double): Double = five % that
+  /**
+    * Returns the remainder of the division of this value by `that`.
+    */
   def % (that: Five): Int = five % that.five
 
+  /**
+    * Returns the bitwise AND of this value and `that`.
+    * @example {{{
+    * (0xf0 & 0xaa) == 0xa0
+    * // in binary:   11110000
+    * //            & 10101010
+    * //              --------
+    * //              10100000
+    * }}}
+    */
   def & (that: Int): Int = five & that
+  /**
+    * Returns the bitwise AND of this value and `that`.
+    * @example {{{
+    * (0xf0 & 0xaa) == 0xa0
+    * // in binary:   11110000
+    * //            & 10101010
+    * //              --------
+    * //              10100000
+    * }}}
+    */
   def & (that: Byte): Int = five & that
+  /**
+    * Returns the bitwise AND of this value and `that`.
+    * @example {{{
+    * (0xf0 & 0xaa) == 0xa0
+    * // in binary:   11110000
+    * //            & 10101010
+    * //              --------
+    * //              10100000
+    * }}}
+    */
   def & (that: Short): Int = five & that
+  /**
+    * Returns the bitwise AND of this value and `that`.
+    * @example {{{
+    * (0xf0 & 0xaa) == 0xa0
+    * // in binary:   11110000
+    * //            & 10101010
+    * //              --------
+    * //              10100000
+    * }}}
+    */
   def & (that: Char): Int = five & that
+  /**
+    * Returns the bitwise AND of this value and `that`.
+    * @example {{{
+    * (0xf0 & 0xaa) == 0xa0
+    * // in binary:   11110000
+    * //            & 10101010
+    * //              --------
+    * //              10100000
+    * }}}
+    */
   def & (that: Long): Long = five & that
+  /**
+    * Returns the bitwise AND of this value and `that`.
+    * @example {{{
+    * (0xf0 & 0xaa) == 0xa0
+    * // in binary:   11110000
+    * //            & 10101010
+    * //              --------
+    * //              10100000
+    * }}}
+    */
   def & (that: Five): Int = five & that.five
 
+  /**
+    * Returns the bitwise OR of this value and `that`.
+    * @example {{{
+    * (0xf0 | 0xaa) == 0xfa
+    * // in binary:   11110000
+    * //            | 10101010
+    * //              --------
+    * //              11111010
+    * }}}
+    */
   def | (that: Int): Int = five | that
+  /**
+    * Returns the bitwise OR of this value and `that`.
+    * @example {{{
+    * (0xf0 | 0xaa) == 0xfa
+    * // in binary:   11110000
+    * //            | 10101010
+    * //              --------
+    * //              11111010
+    * }}}
+    */
   def | (that: Byte): Int = five | that
+  /**
+    * Returns the bitwise OR of this value and `that`.
+    * @example {{{
+    * (0xf0 | 0xaa) == 0xfa
+    * // in binary:   11110000
+    * //            | 10101010
+    * //              --------
+    * //              11111010
+    * }}}
+    */
   def | (that: Short): Int = five | that
+  /**
+    * Returns the bitwise OR of this value and `that`.
+    * @example {{{
+    * (0xf0 | 0xaa) == 0xfa
+    * // in binary:   11110000
+    * //            | 10101010
+    * //              --------
+    * //              11111010
+    * }}}
+    */
   def | (that: Char): Int = five | that
+  /**
+    * Returns the bitwise OR of this value and `that`.
+    * @example {{{
+    * (0xf0 | 0xaa) == 0xfa
+    * // in binary:   11110000
+    * //            | 10101010
+    * //              --------
+    * //              11111010
+    * }}}
+    */
   def | (that: Long): Long = five | that
+  /**
+    * Returns the bitwise OR of this value and `that`.
+    * @example {{{
+    * (0xf0 | 0xaa) == 0xfa
+    * // in binary:   11110000
+    * //            | 10101010
+    * //              --------
+    * //              11111010
+    * }}}
+    */
   def | (that: Five): Int = five | that.five
 
+  /**
+    * Returns the bitwise XOR of this value and `that`.
+    * @example {{{
+    * (0xf0 ^ 0xaa) == 0x5a
+    * // in binary:   11110000
+    * //            ^ 10101010
+    * //              --------
+    * //              01011010
+    * }}}
+    */
   def ^ (that: Int): Int = five ^ that
+  /**
+    * Returns the bitwise XOR of this value and `that`.
+    * @example {{{
+    * (0xf0 ^ 0xaa) == 0x5a
+    * // in binary:   11110000
+    * //            ^ 10101010
+    * //              --------
+    * //              01011010
+    * }}}
+    */
   def ^ (that: Byte): Int = five ^ that
+  /**
+    * Returns the bitwise XOR of this value and `that`.
+    * @example {{{
+    * (0xf0 ^ 0xaa) == 0x5a
+    * // in binary:   11110000
+    * //            ^ 10101010
+    * //              --------
+    * //              01011010
+    * }}}
+    */
   def ^ (that: Short): Int = five ^ that
+  /**
+    * Returns the bitwise XOR of this value and `that`.
+    * @example {{{
+    * (0xf0 ^ 0xaa) == 0x5a
+    * // in binary:   11110000
+    * //            ^ 10101010
+    * //              --------
+    * //              01011010
+    * }}}
+    */
   def ^ (that: Char): Int = five ^ that
+  /**
+    * Returns the bitwise XOR of this value and `that`.
+    * @example {{{
+    * (0xf0 ^ 0xaa) == 0x5a
+    * // in binary:   11110000
+    * //            ^ 10101010
+    * //              --------
+    * //              01011010
+    * }}}
+    */
   def ^ (that: Long): Long = five ^ that
-  def ^ (that: Five): Int = five ^ that
+  /**
+    * Returns the bitwise XOR of this value and `that`.
+    * @example {{{
+    * (0xf0 ^ 0xaa) == 0x5a
+    * // in binary:   11110000
+    * //            ^ 10101010
+    * //              --------
+    * //              01011010
+    * }}}
+    */
+  def ^ (that: Five): Int = five ^ that.five
 
+  /**
+    * Returns this value bit-shifted right by the specified number of bits,
+    *         filling in the left bits with the same value as the left-most bit of this.
+    *         The effect of this is to retain the sign of the value.
+    * @example {{{
+    * -21 >> 3 == -3
+    * // in binary: 11111111 11111111 11111111 11101011 >> 3 ==
+    * //            11111111 11111111 11111111 11111101
+    * }}}
+    */
   def >> (that: Int): Int = five >> that
+  /**
+    * Returns this value bit-shifted right by the specified number of bits,
+    *         filling in the left bits with the same value as the left-most bit of this.
+    *         The effect of this is to retain the sign of the value.
+    * @example {{{
+    * -21 >> 3 == -3
+    * // in binary: 11111111 11111111 11111111 11101011 >> 3 ==
+    * //            11111111 11111111 11111111 11111101
+    * }}}
+    */
   def >> (that: Byte): Int = five >> that
+  /**
+    * Returns this value bit-shifted right by the specified number of bits,
+    *         filling in the left bits with the same value as the left-most bit of this.
+    *         The effect of this is to retain the sign of the value.
+    * @example {{{
+    * -21 >> 3 == -3
+    * // in binary: 11111111 11111111 11111111 11101011 >> 3 ==
+    * //            11111111 11111111 11111111 11111101
+    * }}}
+    */
   def >> (that: Short): Int = five >> that
+  /**
+    * Returns this value bit-shifted right by the specified number of bits,
+    *         filling in the left bits with the same value as the left-most bit of this.
+    *         The effect of this is to retain the sign of the value.
+    * @example {{{
+    * -21 >> 3 == -3
+    * // in binary: 11111111 11111111 11111111 11101011 >> 3 ==
+    * //            11111111 11111111 11111111 11111101
+    * }}}
+    */
   def >> (that: Char): Int = five >> that
+  /**
+    * Returns this value bit-shifted right by the specified number of bits,
+    *         filling in the left bits with the same value as the left-most bit of this.
+    *         The effect of this is to retain the sign of the value.
+    * @example {{{
+    * -21 >> 3 == -3
+    * // in binary: 11111111 11111111 11111111 11101011 >> 3 ==
+    * //            11111111 11111111 11111111 11111101
+    * }}}
+    */
   def >> (that: Long): Long = five >> that
+  /**
+    * Returns this value bit-shifted right by the specified number of bits,
+    *         filling in the left bits with the same value as the left-most bit of this.
+    *         The effect of this is to retain the sign of the value.
+    * @example {{{
+    * -21 >> 3 == -3
+    * // in binary: 11111111 11111111 11111111 11101011 >> 3 ==
+    * //            11111111 11111111 11111111 11111101
+    * }}}
+    */
   def >> (that: Five): Int = five >> that.five
 
+  /**
+    * Returns this value bit-shifted right by the specified number of bits,
+    *         filling the new left bits with zeroes.
+    * @example {{{ 21 >>> 3 == 2 // in binary: 010101 >>> 3 == 010 }}}
+    * @example {{{
+    * -21 >>> 3 == 536870909
+    * // in binary: 11111111 11111111 11111111 11101011 >>> 3 ==
+    * //            00011111 11111111 11111111 11111101
+    * }}}
+    */
   def >>> (that: Int): Int = five >>> that
+  /**
+    * Returns this value bit-shifted right by the specified number of bits,
+    *         filling the new left bits with zeroes.
+    * @example {{{ 21 >>> 3 == 2 // in binary: 010101 >>> 3 == 010 }}}
+    * @example {{{
+    * -21 >>> 3 == 536870909
+    * // in binary: 11111111 11111111 11111111 11101011 >>> 3 ==
+    * //            00011111 11111111 11111111 11111101
+    * }}}
+    */
   def >>> (that: Byte): Int = five >>> that
+  /**
+    * Returns this value bit-shifted right by the specified number of bits,
+    *         filling the new left bits with zeroes.
+    * @example {{{ 21 >>> 3 == 2 // in binary: 010101 >>> 3 == 010 }}}
+    * @example {{{
+    * -21 >>> 3 == 536870909
+    * // in binary: 11111111 11111111 11111111 11101011 >>> 3 ==
+    * //            00011111 11111111 11111111 11111101
+    * }}}
+    */
   def >>> (that: Short): Int = five >>> that
+  /**
+    * Returns this value bit-shifted right by the specified number of bits,
+    *         filling the new left bits with zeroes.
+    * @example {{{ 21 >>> 3 == 2 // in binary: 010101 >>> 3 == 010 }}}
+    * @example {{{
+    * -21 >>> 3 == 536870909
+    * // in binary: 11111111 11111111 11111111 11101011 >>> 3 ==
+    * //            00011111 11111111 11111111 11111101
+    * }}}
+    */
   def >>> (that: Char): Int = five >>> that
+  /**
+    * Returns this value bit-shifted right by the specified number of bits,
+    *         filling the new left bits with zeroes.
+    * @example {{{ 21 >>> 3 == 2 // in binary: 010101 >>> 3 == 010 }}}
+    * @example {{{
+    * -21 >>> 3 == 536870909
+    * // in binary: 11111111 11111111 11111111 11101011 >>> 3 ==
+    * //            00011111 11111111 11111111 11111101
+    * }}}
+    */
   def >>> (that: Long): Long = five >>> that
+  /**
+    * Returns this value bit-shifted right by the specified number of bits,
+    *         filling the new left bits with zeroes.
+    * @example {{{ 21 >>> 3 == 2 // in binary: 010101 >>> 3 == 010 }}}
+    * @example {{{
+    * -21 >>> 3 == 536870909
+    * // in binary: 11111111 11111111 11111111 11101011 >>> 3 ==
+    * //            00011111 11111111 11111111 11111101
+    * }}}
+    */
   def >>> (that: Five): Int = five >>> that.five
 
+  /**
+    * Returns this value bit-shifted left by the specified number of bits,
+    *         filling in the new right bits with zeroes.
+    * @example {{{ 6 << 3 == 48 // in binary: 0110 << 3 == 0110000 }}}
+    */
   def << (that: Int): Int = five << that
+  /**
+    * Returns this value bit-shifted left by the specified number of bits,
+    *         filling in the new right bits with zeroes.
+    * @example {{{ 6 << 3 == 48 // in binary: 0110 << 3 == 0110000 }}}
+    */
   def << (that: Byte): Int = five << that
+  /**
+    * Returns this value bit-shifted left by the specified number of bits,
+    *         filling in the new right bits with zeroes.
+    * @example {{{ 6 << 3 == 48 // in binary: 0110 << 3 == 0110000 }}}
+    */
   def << (that: Short): Int = five << that
+  /**
+    * Returns this value bit-shifted left by the specified number of bits,
+    *         filling in the new right bits with zeroes.
+    * @example {{{ 6 << 3 == 48 // in binary: 0110 << 3 == 0110000 }}}
+    */
   def << (that: Char): Int = five << that
+  /**
+    * Returns this value bit-shifted left by the specified number of bits,
+    *         filling in the new right bits with zeroes.
+    * @example {{{ 6 << 3 == 48 // in binary: 0110 << 3 == 0110000 }}}
+    */
   def << (that: Long): Int = five << that
+  /**
+    * Returns this value bit-shifted left by the specified number of bits,
+    *         filling in the new right bits with zeroes.
+    * @example {{{ 6 << 3 == 48 // in binary: 0110 << 3 == 0110000 }}}
+    */
   def << (that: Five): Int = five << that.five
 
+  /**
+    * Returns `true` if this value is greater than `that`, `false` otherwise.
+    */
   def > (that: Int): Boolean = five > that
+  /**
+    * Returns `true` if this value is greater than `that`, `false` otherwise.
+    */
   def > (that: Byte): Boolean = five > that
+  /**
+    * Returns `true` if this value is greater than `that`, `false` otherwise.
+    */
   def > (that: Short): Boolean = five > that
+  /**
+    * Returns `true` if this value is greater than `that`, `false` otherwise.
+    */
   def > (that: Char): Boolean = five > that
+  /**
+    * Returns `true` if this value is greater than `that`, `false` otherwise.
+    */
   def > (that: Long): Boolean = five > that
+  /**
+    * Returns `true` if this value is greater than `that`, `false` otherwise.
+    */
   def > (that: Float): Boolean = five > that
+  /**
+    * Returns `true` if this value is greater than `that`, `false` otherwise.
+    */
   def > (that: Double): Boolean = five > that
+  /**
+    * Returns `true` if this value is greater than `that`, `false` otherwise.
+    */
   def > (that: Five): Boolean = five > that.five
 
+  /**
+    * Returns `true` if this value is greater than or equal to `that`, `false` otherwise.
+    */
   def >= (that: Int): Boolean = five >= that
+  /**
+    * Returns `true` if this value is greater than or equal to `that`, `false` otherwise.
+    */
   def >= (that: Byte): Boolean = five >= that
+  /**
+    * Returns `true` if this value is greater than or equal to `that`, `false` otherwise.
+    */
   def >= (that: Short): Boolean = five >= that
+  /**
+    * Returns `true` if this value is greater than or equal to `that`, `false` otherwise.
+    */
   def >= (that: Char): Boolean = five >= that
+  /**
+    * Returns `true` if this value is greater than or equal to `that`, `false` otherwise.
+    */
   def >= (that: Long): Boolean = five >= that
+  /**
+    * Returns `true` if this value is greater than or equal to `that`, `false` otherwise.
+    */
   def >= (that: Float): Boolean = five >= that
+  /**
+    * Returns `true` if this value is greater than or equal to `that`, `false` otherwise.
+    */
   def >= (that: Double): Boolean = five >= that
+  /**
+    * Returns `true` if this value is greater than or equal to `that`, `false` otherwise.
+    */
   def >= (that: Five): Boolean = five >= that.five
 
+  /**
+    * Returns `true` if this value is less than `that`, `false` otherwise.
+    */
   def < (that: Int): Boolean = five < that
+  /**
+    * Returns `true` if this value is less than `that`, `false` otherwise.
+    */
   def < (that: Byte): Boolean = five < that
+  /**
+    * Returns `true` if this value is less than `that`, `false` otherwise.
+    */
   def < (that: Short): Boolean = five < that
+  /**
+    * Returns `true` if this value is less than `that`, `false` otherwise.
+    */
   def < (that: Char): Boolean = five < that
+  /**
+    * Returns `true` if this value is less than `that`, `false` otherwise.
+    */
   def < (that: Long): Boolean = five < that
+  /**
+    * Returns `true` if this value is less than `that`, `false` otherwise.
+    */
   def < (that: Float): Boolean = five < that
+  /**
+    * Returns `true` if this value is less than `that`, `false` otherwise.
+    */
   def < (that: Double): Boolean = five < that
+  /**
+    * Returns `true` if this value is less than `that`, `false` otherwise.
+    */
   def < (that: Five): Boolean = five < that.five
 
+  /**
+    * Returns `true` if this value is less than or equal to `that`, `false` otherwise.
+    */
   def <= (that: Int): Boolean = five <= that
+  /**
+    * Returns `true` if this value is less than or equal to `that`, `false` otherwise.
+    */
   def <= (that: Byte): Boolean = five <= that
+  /**
+    * Returns `true` if this value is less than or equal to `that`, `false` otherwise.
+    */
   def <= (that: Short): Boolean = five <= that
+  /**
+    * Returns `true` if this value is less than or equal to `that`, `false` otherwise.
+    */
   def <= (that: Char): Boolean = five <= that
+  /**
+    * Returns `true` if this value is less than or equal to `that`, `false` otherwise.
+    */
   def <= (that: Long): Boolean = five <= that
+  /**
+    * Returns `true` if this value is less than or equal to `that`, `false` otherwise.
+    */
   def <= (that: Float): Boolean = five <= that
+  /**
+    * Returns `true` if this value is less than or equal to `that`, `false` otherwise.
+    */
   def <= (that: Double): Boolean = five <= that
+  /**
+    * Returns `true` if this value is less than or equal to `that`, `false` otherwise.
+    */
   def <= (that: Five): Boolean = five <= that.five
 
+  /**
+    * Returns `true` if this value is equal to `that`, `false` otherwise.
+    */
   def == (that: Int): Boolean = five == that
+  /**
+    * Returns `true` if this value is equal to `that`, `false` otherwise.
+    */
   def == (that: Byte): Boolean = five == that
+  /**
+    * Returns `true` if this value is equal to `that`, `false` otherwise.
+    */
   def == (that: Short): Boolean = five == that
+  /**
+    * Returns `true` if this value is equal to `that`, `false` otherwise.
+    */
   def == (that: Char): Boolean = five == that
+  /**
+    * Returns `true` if this value is equal to `that`, `false` otherwise.
+    */
   def == (that: Long): Boolean = five == that
+  /**
+    * Returns `true` if this value is equal to `that`, `false` otherwise.
+    */
   def == (that: Float): Boolean = five == that
+  /**
+    * Returns `true` if this value is equal to `that`, `false` otherwise.
+    */
   def == (that: Double): Boolean = five == that
+  /**
+    * Returns `true` if this value is equal to `that`, `false` otherwise.
+    */
   def == (that: Five): Boolean = five == that.five
 
+  /**
+    * Returns true if this value is not equal to that, false otherwise.
+    */
   def != (that: Int): Boolean = five != that
+  /**
+    * Returns true if this value is not equal to that, false otherwise.
+    */
   def != (that: Byte): Boolean = five != that
+  /**
+    * Returns true if this value is not equal to that, false otherwise.
+    */
   def != (that: Short): Boolean = five != that
+  /**
+    * Returns true if this value is not equal to that, false otherwise.
+    */
   def != (that: Char): Boolean = five != that
+  /**
+    * Returns true if this value is not equal to that, false otherwise.
+    */
   def != (that: Long): Boolean = five != that
+  /**
+    * Returns true if this value is not equal to that, false otherwise.
+    */
   def != (that: Float): Boolean = five != that
+  /**
+    * Returns true if this value is not equal to that, false otherwise.
+    */
   def != (that: Double): Boolean = five != that
+  /**
+    * Returns true if this value is not equal to that, false otherwise.
+    */
   def != (that: Five): Boolean = five != that.five
 
   def high: String = "o/"
@@ -349,6 +943,5 @@ object Five {
   def apply(): Five = five
 
   implicit def toFive(value: Int): Five = new Five(value)
-  //implicit def toLong(value: Five): Long = value.value.toLong
   implicit def toInt(value: Five): Int = value.five
 }
