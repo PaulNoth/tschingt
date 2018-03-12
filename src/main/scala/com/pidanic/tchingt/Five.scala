@@ -325,28 +325,20 @@ final class Five(private val five: Int = 5) extends Function0[Int] {
 
   def reduce(ints: GenTraversable[Int]): Int = five
 
-  def rot(ints: List[Int]): List[Int] = ???
-
-  def rot(str: String): String = ???
+  def rot(str: String): String = {
+    if(str.matches("[\\da-zA-Z]+") && str.length > five) {
+      str.substring(five) + str.substring(0, five)
+    }
+    else
+      str
+  }
 
   def factorial: Int = 120
-
-  // TODO
-  def async2: (Try[Int] => Unit) => Unit = {
-    onFinish => {
-      global.execute(new Runnable {
-        override def run(): Unit = {
-          println("sdasdas")
-          onFinish(Try(five))
-        }
-      })
-    }
-  }
 
   def async(callback: Try[Int] => Unit): Unit = {
     Await.result(Future {
       callback(Try(five))
-    }, Duration(five, TimeUnit.SECONDS))
+    }, Duration(5, TimeUnit.SECONDS))
   }
 }
 

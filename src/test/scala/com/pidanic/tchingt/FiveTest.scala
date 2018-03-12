@@ -1157,7 +1157,21 @@ class FiveTest extends FlatSpec with Matchers {
 
   "singles" should "be the singles released by the 90's boy band 5ive" in {
     val five = Five()
-    five.singles should equal(List("Slam Dunk (Da Funk)", "When the Lights Go Out", "Got the Feelin'", "Everybody Get Up", "It's the Things You Do", "Until the Time Is Through", "If Ya Gettin' Down", "Keep On Movin'", "Don't Wanna Let You Go", "We Will Rock You", "Let's Dance", "Closer to Me", "Rock the Party", "I Wish It Could Be Christmas Everyday"))
+    five.singles should equal(List(
+      "Slam Dunk (Da Funk)",
+      "When the Lights Go Out", "Got the Feelin'",
+      "Everybody Get Up",
+      "It's the Things You Do",
+      "Until the Time Is Through",
+      "If Ya Gettin' Down",
+      "Keep On Movin'",
+      "Don't Wanna Let You Go",
+      "We Will Rock You",
+      "Let's Dance",
+      "Closer to Me",
+      "Rock the Party",
+      "I Wish It Could Be Christmas Everyday")
+    )
   }
 
   "furious" should "be the five fictional members of the ninja group Furious Five from the movie Kung-Fu Panda" in {
@@ -1215,12 +1229,17 @@ class FiveTest extends FlatSpec with Matchers {
     five.rot("0123456789") should equal("5678901234")
   }
 
-  it should "rotate lists" in {
+  it should "rotate small letters" in {
     val five = Five()
-    five.rot(List(1, 2, 3, 4, 5, 6)) should equal(List(6, 1, 2, 3, 4, 5))
+    five.rot("abcdefghijklmnopqrstuvwxyz") should equal("fghijklmnopqrstuvwxyzabcde")
   }
 
-  it should "not rotate emoticons still be five" in {
+  it should "rotate capital letters" in {
+    val five = Five()
+    five.rot("ABCDEFGHIJKLMNOPQRSTUVWXYZ") should equal("FGHIJKLMNOPQRSTUVWXYZABCDE")
+  }
+
+  it should "not rotate emoticons" in {
     val five = Five()
     five.rot("$_$ -,- @.@?") should equal("$_$ -,- @.@?")
   }
