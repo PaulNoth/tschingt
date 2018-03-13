@@ -755,7 +755,7 @@ final class Five(private val five: Int = 5) extends Function0[Int] {
 
   def law: String = "The Law of Fives states simply that: All things happen in fives, or are divisible by or are multiples of five, or are somehow directly or indirectly appropriate to 5. The Law of Fives is never wrong."
 
-  def convertTo(that: Any): Any = that
+  def convertTo[T](that: T): T = that
 
   def roman: String = "V"
 
