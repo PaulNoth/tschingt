@@ -5,7 +5,9 @@ This is the reimplementation of [five.js](https://github.com/jackdclark/five) wr
 *Tchingt* means 5 five in [romansh](https://en.wikipedia.org/wiki/Romansh_language).
 
 The differences agains the javascript are:
+
 - `slovakian` method renamed to `slovak`
+
 - added `romansh` because library name
 
 ### Usage
@@ -124,7 +126,7 @@ five.romansh // tchingt
 five.russian // пять
 five.serbian // pet
 five.sinhala // පහ
-five.slovakian // päť
+five.slovak // päť
 five.slovenian // pet
 five.spanish // cinco
 five.swedish // fem
