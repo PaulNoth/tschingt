@@ -1,6 +1,6 @@
 # Tchingt
 A library to overcomplicate `5`.
-This is the reimplementation of [five.js](https://github.com/jackdclark/five) written in Javascript to Scala.
+Inspired with [five.js](https://github.com/jackdclark/five) and reimplemented from Javascript to Scala.
 
 *Tchingt* means 5 five in [romansh](https://en.wikipedia.org/wiki/Romansh_language).
 
@@ -9,6 +9,8 @@ The differences agains the javascript are:
 - `slovakian` method renamed to `slovak`
 
 - added `romansh` because library name
+
+--------
 
 ### Usage
 ##### Import the module
@@ -19,7 +21,6 @@ import com.pidanic.tchingt.Five
 ##### Basic 5
 ```scala
 Five() // 5
-
 
 val five = Five()
 five    // 5
