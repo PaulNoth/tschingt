@@ -913,9 +913,9 @@ final class Five(private val five: Int = 5) extends Function0[Int] {
 
   def isFive(num: Int): Boolean = num == five
 
-  def filter(ints: GenTraversable[Int]): GenTraversable[Int] = ints.filter(_ == five)
+  def filter[T <: GenTraversable[Int]](ints: T): T = ints.filter(_ == five).asInstanceOf[T]
 
-  def map(ints: GenTraversable[Int]): GenTraversable[Int] = ints.map(_ => five)
+  def map[T <: GenTraversable[Int]](ints: T): T = ints.map(_ => five).asInstanceOf[T]
 
   def reduce(ints: GenTraversable[Int]): Int = five
 
