@@ -1229,6 +1229,11 @@ class FiveTest extends FlatSpec with Matchers {
     five.rot("0123456789") should equal("5678901234")
   }
 
+  it should "rotate small strings" in {
+    val five = Five()
+    five.rot("five.js") should equal("knaj.ox")
+  }
+
   it should "rotate small letters" in {
     val five = Five()
     five.rot("abcdefghijklmnopqrstuvwxyz") should equal("fghijklmnopqrstuvwxyzabcde")

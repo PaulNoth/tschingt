@@ -1231,14 +1231,20 @@ final class Five(private val five: Int = 5) extends Function0[Int] {
   def reduce(ints: GenTraversable[Int]): Int = five
 
   /**
-    * Returns new string when rotated by five places.
+    * Returns new string when each character is shifted five characters.
     */
   def rot(str: String): String = {
-    if(str.matches("[\\da-zA-Z]+") && str.length > five) {
-      str.substring(five) + str.substring(0, five)
-    }
-    else
-      str
+    str.map(c => {
+      if(c >= '0' && c <= '9') {
+        ((c.toInt + five - '0'.toInt) % 10 + '0'.toInt).toChar
+      } else if(c >= 'a' && c <= 'z') {
+        ((c.toInt + five - 'a'.toInt) % 26 + 'a'.toInt).toChar
+      } else if(c >= 'A' && c <= 'Z') {
+        ((c.toInt + five - 'A'.toInt) % 26 + 'A'.toInt).toChar
+      } else {
+        c
+      }
+    })
   }
 
   /**
