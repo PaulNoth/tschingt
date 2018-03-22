@@ -59,7 +59,7 @@ five.tooSlow // 5, with a ~500 millisecond delay
 five.roman // V
 five.morseCode // .....
 five.negative // -5
-five.loud // FIVE
+five.loud() // FIVE
 five.loud("piglatin") // IVEFAY
 five.smooth // S
 five.bucks // $5.00
@@ -80,7 +80,7 @@ five.belarusian // пяць
 five.bosnian // pet
 five.bulgarian // пет
 five.catalan // cinc
-five.chinese // 五
+five.chinese() // 五
 five.chinese("pinyin") // wǔ
 five.chinese("financial") // 伍
 five.choctaw // tahlapi
@@ -89,7 +89,7 @@ five.czech // pět
 five.dothraki // mek
 five.dovah // hen
 five.dutch // vijf
-five.elvish // lempë
+five.elvish() // lempë
 five.elvish("quenya") // lempë
 five.elvish("sindarin") // leben
 five.english // five
