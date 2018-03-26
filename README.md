@@ -4,7 +4,7 @@ Inspired with [five.js](https://github.com/jackdclark/five) and reimplemented fr
 
 *Tschingt* means 5 five in [romansh](https://en.wikipedia.org/wiki/Romansh_language).
 
-The differences agains the javascript are:
+The differences against the javascript are:
 
 - `slovakian` method renamed to `slovak`
 
