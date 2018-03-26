@@ -1,4 +1,4 @@
-name := "Tchingt"
+name := "Tschingt"
 
 version := "0.8.0"
 

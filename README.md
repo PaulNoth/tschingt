@@ -1,8 +1,8 @@
-# Tchingt
+# Tschingt
 A library to overcomplicate `5`.
 Inspired with [five.js](https://github.com/jackdclark/five) and reimplemented from Javascript to Scala.
 
-*Tchingt* means 5 five in [romansh](https://en.wikipedia.org/wiki/Romansh_language).
+*Tschingt* means 5 five in [romansh](https://en.wikipedia.org/wiki/Romansh_language).
 
 The differences agains the javascript are:
 
@@ -15,7 +15,7 @@ The differences agains the javascript are:
 ### Usage
 ##### Import the module
 ```scala
-import com.pidanic.tchingt.Five
+import com.pidanic.tschingt.Five
 ```
 
 ##### Basic 5
@@ -123,7 +123,7 @@ five.polish // pięć
 five.portuguese // cinco
 five.punjabi // ਪੰਜ
 five.romanian // cinci
-five.romansh // tchingt
+five.romansh // tschingt
 five.russian // пять
 five.serbian // pet
 five.sinhala // පහ

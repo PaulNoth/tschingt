@@ -1,4 +1,4 @@
-package com.pidanic.tchingt
+package com.pidanic.tschingt
 
 import java.math.BigInteger
 import java.util.Date
@@ -982,7 +982,7 @@ final class Five(private val five: Int = 5) extends Function0[Int] {
   /**
     * Returns `5` in Romansh language.
     */
-  def romansh: String = "tchingt"
+  def romansh: String = "tschingt"
   /**
     * Returns `5` in Russian language.
     */

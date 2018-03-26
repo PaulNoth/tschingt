@@ -1,4 +1,4 @@
-package com.pidanic.tchingt
+package com.pidanic.tschingt
 
 import java.util.Date
 
@@ -950,9 +950,9 @@ class FiveTest extends FlatSpec with Matchers {
     five.romanian should equal("cinci")
   }
 
-  "romansh" should "be 'tchingt'" in {
+  "romansh" should "be 'tschingt'" in {
     val five = Five()
-    five.romansh should equal("tchingt")
+    five.romansh should equal("tschingt")
   }
 
   "russian" should "be 'пять'" in {
