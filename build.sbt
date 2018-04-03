@@ -1,6 +1,6 @@
 name := "Tschingt"
 
-version := "0.0.1"
+version := "0.0.3"
 
 scalaVersion := "2.12.4"
 
@@ -10,7 +10,7 @@ libraryDependencies += "org.scalatest" % "scalatest_2.12" % "3.0.5" % "test"
 
 organization := "com.pidanic"
 
-sonatypeProfileName := "(com.pidanic)"
+sonatypeProfileName := "com.pidanic"
 
 //pgpPublicRing := file("/Users/pavol.pidanic/.sbt/gpg/pubring.asc")
 //pgpSecretRing := file("/Users/pavol.pidanic/.sbt/gpg/secring.asc")
