@@ -6,9 +6,14 @@ scalaVersion := "2.12.4"
 
 libraryDependencies += "org.scalatest" % "scalatest_2.12" % "3.0.5" % "test"
 
-useGpg := true
+//useGpg := true
+
+organization := "com.pidanic"
 
 sonatypeProfileName := "(com.pidanic)"
+
+//pgpPublicRing := file("/Users/pavol.pidanic/.sbt/gpg/pubring.asc")
+//pgpSecretRing := file("/Users/pavol.pidanic/.sbt/gpg/secring.asc")
 
 pomIncludeRepository := { _ => false }
 
