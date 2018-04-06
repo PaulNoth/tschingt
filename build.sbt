@@ -7,14 +7,10 @@ scalaVersion := "2.12.5"
 libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.5" % "test"
 crossScalaVersions := Seq("2.11.12", "2.12.4")
 crossVersion := CrossVersion.binary
-//useGpg := true
 
 organization := "com.pidanic"
 
 sonatypeProfileName := "com.pidanic"
-
-//pgpPublicRing := file("/Users/pavol.pidanic/.sbt/gpg/pubring.asc")
-//pgpSecretRing := file("/Users/pavol.pidanic/.sbt/gpg/secring.asc")
 
 pomIncludeRepository := { _ => false }
 
