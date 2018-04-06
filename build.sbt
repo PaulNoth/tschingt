@@ -2,7 +2,7 @@ name := "Tschingt"
 
 version := "0.8.1"
 
-scalaVersion := "2.12.4"
+scalaVersion := "2.12.5"
 
 libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.5" % "test"
 crossScalaVersions := Seq("2.11.12", "2.12.4")
