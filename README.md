@@ -13,6 +13,10 @@ The differences against the javascript are:
 --------
 
 ### Usage
+##### Build.sbt
+```sbtshell
+libraryDependencies += "com.pidanic" % "tschingt_2.12" % "0.8.1"
+```
 ##### Import the module
 ```scala
 import com.pidanic.tschingt.Five

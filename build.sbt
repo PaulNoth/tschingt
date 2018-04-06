@@ -1,11 +1,12 @@
 name := "Tschingt"
 
-version := "0.0.5"
+version := "0.8.1"
 
 scalaVersion := "2.12.4"
 
-libraryDependencies += "org.scalatest" % "scalatest_2.12" % "3.0.5" % "test"
-
+libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.5" % "test"
+crossScalaVersions := Seq("2.11.12", "2.12.4")
+crossVersion := CrossVersion.binary
 //useGpg := true
 
 organization := "com.pidanic"
