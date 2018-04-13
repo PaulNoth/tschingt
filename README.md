@@ -28,31 +28,31 @@ Five() // 5
 
 val five = Five()
 five    // 5
-five(); // 5
+five() // 5
 ```
 
 ## The Law of Fives
 ```scala
-five.law; // The Law of Fives states simply that: All things happen in fives, or are divisible by or are multiples of five, or are somehow directly or indirectly appropriate to 5. The Law of Fives is never wrong.
+five.law // The Law of Fives states simply that: All things happen in fives, or are divisible by or are multiples of five, or are somehow directly or indirectly appropriate to 5. The Law of Fives is never wrong.
 ```
 
 ##### Addition
 ```scala
-five() + five(); // 10
+five() + five() // 10
 ```
 
 ##### Multiplication
 ```scala
-five() * five(); // 25
+five() * five() // 25
 ```
 
 ##### Division
 ```scala
-five() / five(); // 1
+five() / five() // 1
 ```
 ##### Combinatorics
 ```scala
-five.factorial; // 120
+five.factorial // 120
 ```
 
 ##### Different sorts of 5
@@ -145,44 +145,44 @@ five.welsh // pump
 
 ##### Different radices
 ```scala
-five.binary; // 101
-five.octal; // 5
-five.hex; // 5
-five.base(4); // 11
-five.base(3); // 12
+five.binary // 101
+five.octal // 5
+five.hex // 5
+five.base(4) // 11
+five.base(3) // 12
 ```
 
 ##### Assertion
 ```scala
-five.isFive(10); // false
+five.isFive(10) // false
 ```
 
 ##### Filter, Map and Reduce
 ```scala
-five.filter(List(5, 1, 5)); // List(5, 5)
-five.map(List(1, 2, 3)); // List(5, 5, 5)
-five.reduce(List(1, 2, 3)); // 5
+five.filter(List(5, 1, 5)) // List(5, 5)
+five.map(List(1, 2, 3)) // List(5, 5, 5)
+five.reduce(List(1, 2, 3)) // 5
 ```
 
 ##### Novelty
 ```scala
-five.fab; // List("Juwan Howard", "Ray Jackson", "Jimmy King", "Jalen Rose", "Chris Webber")
-five.jackson; // List("Jackie", "Tito", "Jermaine", "Marlon", "Michael")
-five.furious; // List("Tigress", "Viper", "Crane", "Monkey", "Mantis")
-five.luniz; // "I Got 5 on It"
-five.r; // "£5"
-five.funk; // "5 bad boys with the power to rock you"
-five.high; // "o/"
-five.members; // List("Sean Conlon", "Ritchie Neville", "Scott Robinson", "Jason 'J' Brown", "Abz Love")
-five.discography; // List("5ive", "Invincible", "Kingsize")
-five.singles; // List("Slam Dunk (Da Funk)", "When the Lights Go Out", "Got the Feelin'", "Everybody Get Up", "It's the Things You Do", "Until the Time Is Through", "If Ya Gettin'" Down", "Keep On Movin'", "Don't Wanna Let You Go", "We Will Rock You", "Let's Dance", "Closer to Me", "Rock the Party", "I Wish It Could Be Christmas Everyday")
-five.famous; // List("Julian", "Dick", "George", "Anne", "Timmy")
-five.fiveFiveFive; // "Interstella 5555: The 5tory of the 5ecret 5tar 5ystem"
+five.fab // List("Juwan Howard", "Ray Jackson", "Jimmy King", "Jalen Rose", "Chris Webber")
+five.jackson // List("Jackie", "Tito", "Jermaine", "Marlon", "Michael")
+five.furious // List("Tigress", "Viper", "Crane", "Monkey", "Mantis")
+five.luniz // "I Got 5 on It"
+five.r // "£5"
+five.funk // "5 bad boys with the power to rock you"
+five.high // "o/"
+five.members // List("Sean Conlon", "Ritchie Neville", "Scott Robinson", "Jason 'J' Brown", "Abz Love")
+five.discography // List("5ive", "Invincible", "Kingsize")
+five.singles // List("Slam Dunk (Da Funk)", "When the Lights Go Out", "Got the Feelin'", "Everybody Get Up", "It's the Things You Do", "Until the Time Is Through", "If Ya Gettin'" Down", "Keep On Movin'", "Don't Wanna Let You Go", "We Will Rock You", "Let's Dance", "Closer to Me", "Rock the Party", "I Wish It Could Be Christmas Everyday")
+five.famous // List("Julian", "Dick", "George", "Anne", "Timmy")
+five.fiveFiveFive // "Interstella 5555: The 5tory of the 5ecret 5tar 5ystem"
 ```
 
 ##### Rotation
 ```scala
-five.rot("five.js"); //"knaj.ox"
+five.rot("five.js") //"knaj.ox"
 ```
 
 ##### Asynchronous Usage
@@ -190,22 +190,22 @@ five.rot("five.js"); //"knaj.ox"
 five.async(five => {
     // five.isSuccess
 	// five == 5
-});
+})
 ```
 
 ##### Unicode
 ```scala
-five.oclock; // "🕔"
+five.oclock // "🕔"
 
-five.oclockSomewhere; // "🍺"
+five.oclockSomewhere // "🍺"
 
-five.guys; // "🍔"
+five.guys // "🍔"
 ```
 
 ##### Money
 ```scala
-five.euro; // "5€"
-five.dollar; // "$5"
+five.euro // "5€"
+five.dollar // "$5"
 ```
 
 
