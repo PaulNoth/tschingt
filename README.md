@@ -2,7 +2,7 @@
 A library to overcomplicate `5`.
 Inspired with [five.js](https://github.com/jackdclark/five) and reimplemented from Javascript to Scala.
 
-*Tschingt* means 5 five in [romansh](https://en.wikipedia.org/wiki/Romansh_language).
+*Tschingt* means 5 (five) in [romansh](https://en.wikipedia.org/wiki/Romansh_language).
 
 The differences against the javascript are:
 
